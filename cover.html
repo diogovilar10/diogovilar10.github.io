@@ -1,0 +1,24 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Diogo Vilar</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;height:100%;background:#0b0c0e;color:#ededea;overflow:hidden}
+.box{position:absolute;top:50%;left:50%;height:100vh;width:133.333vh;transform:translate(-50%,-50%);display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:4vh;padding:0 7vh;box-sizing:border-box}
+.k{font:500 2.1vh/1 "JetBrains Mono",monospace;letter-spacing:.12em;text-transform:uppercase;color:#7b88ff;display:flex;align-items:center;gap:1.2vh}
+.k i{width:1.3vh;height:1.3vh;border-radius:50%;background:#ff4d4d}
+h1{font:800 11vh/.9 "Bricolage Grotesque",sans-serif;letter-spacing:-.03em;margin:2.5vh 0 3vh}
+.s{font:500 2.1vh/1.5 "JetBrains Mono",monospace;color:#8d9097;letter-spacing:.04em}
+.ph{display:flex;gap:1.8vh;justify-content:center;align-items:center}
+.ph img{width:21vh;aspect-ratio:9/16;object-fit:cover;border-radius:1.2vh;box-shadow:0 2vh 5vh rgba(0,0,0,.6)}
+.ph img:nth-child(2){width:26vh}
+.ph.wide img{width:auto;height:30vh;aspect-ratio:16/9}
+.tl{position:absolute;left:7vh;right:7vh;bottom:7vh;height:1.2vh;display:flex;gap:.6vh}
+.tl b{flex:1;border-radius:.4vh;background:#2a2c31}.tl b:nth-child(3n){background:#7b88ff;flex:2}.tl b:nth-child(4n){flex:.6}
+</style></head><body><div class="box" id="b"></div><div class="tl"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></div>
+<script>
+var d={short:["Short-form<br>video editing","Reels · TikTok · Shorts",["podcast-clip","talking-head-vendedor","dia-no-escritorio"]],
+podcast:["Podcast<br>editing & clips","Full episodes · viral clips",["conversas-alavancar","entrevista-perguntas","talking-head-negociacao"]],
+motion:["Motion graphics<br>& brand intros","After Effects · logos · titles",["servicos","intro-studios","logo-wizark"]]};
+var k=(location.search.match(/s=(\w+)/)||[])[1]||"short",x=d[k]||d.short;
+document.getElementById("b").innerHTML='<div><div class="k"><i></i>Diogo Vilar · Video editor</div><h1>'+x[0]+'</h1><div class="s">'+x[1]+'</div></div><div class="ph">'+x[2].map(function(n){return '<img src="media/'+n+'.jpg" alt="">'}).join("")+'</div>';
+</script></body></html>
